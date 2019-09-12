@@ -14,12 +14,7 @@
          url(/VGAD.tff) format("tff");
 }
 @font-face {
-    font-family: "VGA9False";
-    src: local("VGA9False"),
-         url(/Flexi_IBM_VGA9_False.woff) format("woff");
-}
-@font-face {
-    font-family: "VGA9True";
-    src: local("VGA9True"),
-         url(/Flexi_IBM_VGA9_True.woff) format("woff");
+    font-family: "VGA9";
+    src: local("VGA9"),
+         url(/VGA9.woff) format("woff");
 }
