@@ -5,8 +5,8 @@
 }
 @font-face {
     font-family: "VGAVec3";
-    src: local("VGAVec2"),
-         url(/VGAVec2.woff?v=3) format("woff");
+    src: local("VGAVec3"),
+         url(/VGAVec3.woff) format("woff");
 }
 @font-face {
     font-family: "VGAD";
