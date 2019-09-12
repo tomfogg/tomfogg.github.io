@@ -4,17 +4,22 @@
          url(/VGAVec.woff) format("woff");
 }
 @font-face {
+    font-family: "VGAVec2";
+    src: local("VGAVec2"),
+         url(/VGAVec2.woff) format("woff");
+}
+@font-face {
     font-family: "VGAD";
     src: local("VGAD"),
          url(/VGAD.tff) format("tff");
 }
 @font-face {
-    font-family: "Flexi IBM VGA9 False";
-    src: local("Flexi IBM VGA9 False"),
-         url(/Flexi_IBM_VGA9_False.tff) format("tff");
+    font-family: "VGA9False";
+    src: local("VGA9False"),
+         url(/Flexi_IBM_VGA9_False.woff) format("woff");
 }
 @font-face {
-    font-family: "Flexi IBM VGA9 True";
-    src: local("Flexi IBM VGA9 True"),
-         url(/Flexi_IBM_VGA9_True.tff) format("tff");
+    font-family: "VGA9True";
+    src: local("VGA9True"),
+         url(/Flexi_IBM_VGA9_True.woff) format("woff");
 }
