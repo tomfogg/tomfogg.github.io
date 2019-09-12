@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "VGAVec";
+    src: local("VGAVec"),
+         url(/VGAVec.woff) format("woff");
+}
+@font-face {
+    font-family: "VGAD";
+    src: local("VGAD"),
+         url(/VGAD.tff) format("tff");
+}
+@font-face {
+    font-family: "Flexi IBM VGA9 False";
+    src: local("Flexi IBM VGA9 False"),
+         url(/Flexi_IBM_VGA9_False.tff) format("tff");
+}
+@font-face {
+    font-family: "Flexi IBM VGA9 True";
+    src: local("Flexi IBM VGA9 True"),
+         url(/Flexi_IBM_VGA9_True.tff) format("tff");
+}
