@@ -9,6 +9,7 @@
          url(/VGAVec3.woff) format("woff");
 }
 @font-face {
+    font-stretch: condensed;
     font-family: "VGAD";
     src: local("VGAD"),
          url(/VGAD.tff) format("tff");
