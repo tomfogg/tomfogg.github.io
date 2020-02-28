@@ -61,18 +61,20 @@ background-size: 14.00px 14.00px;
                     }
                     svg.appendChild(g);
                 }
-            },100);
-            setInterval(()=>{
-                Array.from(document.querySelectorAll('.stack')).map(d=>{
-                    d.pos[0] += d.pos[2];
-                    d.pos[1] += d.pos[3];
-                    if(d.pos[0] > 150 && d.pos[2] > 0) d.pos[2] = -d.pos[2];
-                    if(d.pos[0] < -100 && d.pos[2] < 0) d.pos[2] = -d.pos[2];
-                    if(d.pos[1] > 150 && d.pos[3] > 0) d.pos[3] = -d.pos[3];
-                    if(d.pos[1] < -100 && d.pos[3] < 0) d.pos[3] = -d.pos[3];
-                    d.style.transform = 'translate('+d.pos[0]+'%,'+d.pos[1]+'%)';
-                })
-            },10);
+            },100);            
+            const animate = ()=>{
+                  Array.from(document.querySelectorAll('.stack')).map(d=>{
+                      d.pos[0] += d.pos[2];
+                      d.pos[1] += d.pos[3];
+                      if(d.pos[0] > 150 && d.pos[2] > 0) d.pos[2] = -d.pos[2];
+                      if(d.pos[0] < -100 && d.pos[2] < 0) d.pos[2] = -d.pos[2];
+                      if(d.pos[1] > 150 && d.pos[3] > 0) d.pos[3] = -d.pos[3];
+                      if(d.pos[1] < -100 && d.pos[3] < 0) d.pos[3] = -d.pos[3];
+                      d.style.transform = 'translate('+d.pos[0]+'%,'+d.pos[1]+'%)';
+                  })
+                  window.requestAnimationFrame(animate);
+              };
+            window.requestAnimationFrame(animate);
             function setsize() {
                 let width = window.innerWidth;
                 let height = window.innerHeight;
