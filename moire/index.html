@@ -77,8 +77,8 @@ background-size: 14.00px 14.00px;
                 let width = window.innerWidth;
                 let height = window.innerHeight;
                 let svg = document.querySelector('svg');
-                svg.setAttribute('width',mw+'px');
-                svg.setAttribute('height',mw+'px');
+                svg.setAttribute('width',width+'px');
+                svg.setAttribute('height',height+'px');
             }
             window.addEventListener('load',setsize);
             window.addEventListener('orientationchange', setsize);
