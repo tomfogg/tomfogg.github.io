@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+.template { display:none;}
+#cash, #cash2 {
+    transform: rotate(-45deg) skew(15deg, 15deg);
+    transform-origin: center center;
+    transform-style: preserve-3d;
+}
+      #cash path {
+          fill: white;
+      }
+      #cash2 path { fill: none; }
+      path { 
+          stroke: black; 
+      }
+      text { fill: black; stroke: black;}
+      circle { stroke: black; fill: none;}
+
+      body {
+      background-image: linear-gradient(315deg, black 7.14%, white 7.14%, white 50%, black 50%, black 57.14%, white 57.14%, white 100%);
+background-size: 14.00px 14.00px;
+      }
+        </style>
+    </head>
+    <body>
+        <svg width='100%' height='100%'>
+        <defs>
+            <g id="cash">
+                <path d="M0,0 l200,0 l0,80 l-200,0 l0,-80" />
+                <text x=5 y=20>100</text>
+                <text x=170 y=70>100</text>
+                <circle cx=100 cy=40 r=30 />
+            </g>
+            <g id="cash2">
+                <path d="M0,0 l10,0 M200,70 l0,10 l-200,0 l0,-80" />
+            </g>
+        </defs>
+        </svg>
+        <script>
+            let svg = document.querySelector('svg');
+            let stackcount = 0;
+            setInterval(()=>{
+                stackcount++;
+                if(stackcount < 200) {
+                    let g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                    g.pos = [
+                        Math.round(100-Math.random()*200),
+                        Math.round(100-Math.random()*200),
+                        Math.random() - 0.5,
+                        Math.random() - 0.5
+                    ];
+                    g.setAttribute('class','stack');
+                    for(i=10;i>0;i--) {
+                        let cash = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+                        cash.setAttributeNS('http://www.w3.org/1999/xlink','href','#cash'+(i==1?'':'2'));
+                        cash.setAttributeNS('http://www.w3.org/1999/xlink','y',(20+i*10)+'px');
+                        cash.style.transform='translate(0,'+(10+i*10)+'px)';
+                        g.appendChild(cash);
+                    }
+                    svg.appendChild(g);
+                }
+            },100);
+            setInterval(()=>{
+                Array.from(document.querySelectorAll('.stack')).map(d=>{
+                    d.pos[0] += d.pos[2];
+                    d.pos[1] += d.pos[3];
+                    if(d.pos[0] > 150 && d.pos[2] > 0) d.pos[2] = -d.pos[2];
+                    if(d.pos[0] < -100 && d.pos[2] < 0) d.pos[2] = -d.pos[2];
+                    if(d.pos[1] > 150 && d.pos[3] > 0) d.pos[3] = -d.pos[3];
+                    if(d.pos[1] < -100 && d.pos[3] < 0) d.pos[3] = -d.pos[3];
+                    d.style.transform = 'translate('+d.pos[0]+'%,'+d.pos[1]+'%)';
+                })
+            },10);
+        </script>
+    </body>
+</html>
