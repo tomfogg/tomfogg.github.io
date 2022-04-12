@@ -1,21 +1,36 @@
 @font-face {
+    font-style: normal;
+    font-weight: normal;
     font-family: "VGAVec";
     src: local("VGAVec"),
          url(/VGAVec.woff) format("woff");
 }
 @font-face {
+    font-style: normal;
+    font-weight: normal;
     font-family: "VGAVec2";
     src: local("VGAVec2"),
          url(/VGAVec2.woff) format("woff");
 }
 @font-face {
+    font-style: normal;
+    font-weight: normal;
     font-stretch: condensed;
     font-family: "VGAD";
     src: local("VGAD"),
          url(/VGAD.tff) format("tff");
 }
 @font-face {
+    font-style: normal;
+    font-weight: normal;
     font-family: "VGA9";
     src: local("VGA9"),
          url(/VGA9.woff) format("woff");
+}
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "VGA3";
+    src: local("VGA3"),
+         url(/VGAVec2.otf) format("woff");
 }
