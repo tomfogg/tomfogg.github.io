@@ -1,0 +1,7 @@
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "VGA5";
+    src: local("VGA5"),
+         url(/VGA5.woff) format("woff");
+}
