@@ -3,5 +3,5 @@
     font-weight: normal;
     font-family: "VGAVector";
     src: local("VGAVector"),
-         url(/VGAVector.ttf) format("ttf");
+         url(/VGAVector.woff) format("woff");
 }
