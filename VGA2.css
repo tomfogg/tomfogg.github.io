@@ -1,0 +1,7 @@
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "VGA2";
+    src: local("VGA2"),
+         url(/VGA2.woff) format("woff");
+}
