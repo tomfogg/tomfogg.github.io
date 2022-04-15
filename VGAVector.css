@@ -3,5 +3,5 @@
     font-weight: normal;
     font-family: "VGAMedium";
     src: local("VGAMedium"),
-         url(/VGAMedium.ttf) format("ttf");
+         url(/VGAMedium.woff) format("woff");
 }
