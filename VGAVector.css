@@ -1,7 +1,7 @@
 @font-face {
     font-style: normal;
     font-weight: normal;
-    font-family: "VGAVector";
-    src: local("VGAVector"),
-         url(/VGAVector.woff) format("woff");
+    font-family: "VGAMedium";
+    src: local("VGAMedium"),
+         url(/VGAMedium.woff) format("woff");
 }
